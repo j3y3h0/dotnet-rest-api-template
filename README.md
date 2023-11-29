@@ -2,7 +2,8 @@
 
 이 프로젝트는 C# ASP.NET 7.0 프레임워크를 사용하여 개발된 REST API 템플릿 웹 애플리케이션입니다.
 
-![image](https://github.com/sports2idev/dotnet-rest-api-template/assets/85467436/26546021-44b7-4a11-9b4d-003c0d250e28)
+![image](https://github.com/j3y3h0/dotnet-rest-api-template/assets/18677603/c884494d-f1bc-41b4-a3bf-7d9ca8a5eca8)
+
 
 ## 구현된 부분
 
@@ -41,15 +42,15 @@
 
 1. 프로젝트를 클론합니다.
     ```bash
-    git clone https://github.com/sports2idev/dotnet-rest-api-template.git
+    git clone https://github.com/j3y3h0/dotnet-rest-api-template.git
     ```
 
 ## API
 
-| METHOD | URL                      | 내용                                 |
-| ------ | ------------------------ | ------------------------------------ |
-| GET    | /api/kbo/master/schedule | KBO 경기 일정                        |
-| POST   | /api/auth/login          | 로그인 및 유저정보 가져와서 JWT 발급 |
+| METHOD | URL                      | 내용                                |
+| ------ | ------------------------ | ------------------------------------|
+| GET    | /api/board/list          | 게시판 리스트                        |
+| POST   | /api/auth/login          | 로그인 및 유저정보 가져와서 JWT 발급  |
 
 ## 인증 설정
 
@@ -59,7 +60,7 @@ JWT 토큰을 사용하여 API에 대한 인증을 수행합니다. 인증을 �
 {
     "Jwt": {
         "secretKey": "256_BIT_KEY",
-        "expirationMins": 10
+        "expirationMins": 60
     }
 }
 ```
