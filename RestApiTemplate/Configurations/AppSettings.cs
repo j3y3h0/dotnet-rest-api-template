@@ -51,11 +51,11 @@ namespace RestApiTemplate.Configurations
         #endregion
 
         //SET appsettings.json
-        public AppSettings(string appMode, Connections connections, Jwt jwt)
+        public AppSettings(IConfigurationManager appsettings)
         {
-            _appMode = appMode;
-            _connections = connections;
-            _jsonWebToken = jwt;
+            _appMode = appsettings.GetSection("Mode").Get<string>();
+            _connections = appsettings.GetSection("Connection").Get<Connections>();
+            _jsonWebToken = appsettings.GetSection("Jwt").Get<Jwt>();
 
             SetServerMode();
         }
